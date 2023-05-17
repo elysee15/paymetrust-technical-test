@@ -10,6 +10,7 @@ import {
 } from "@remix-run/react";
 
 import styles from "./tailwind.css";
+import { Toaster } from "react-hot-toast";
 
 export const links: LinksFunction = () => [
   ...(cssBundleHref ? [{ rel: "stylesheet", href: cssBundleHref }] : []),
@@ -30,6 +31,7 @@ export default function App() {
         <ScrollRestoration />
         <Scripts />
         <LiveReload />
+        <Toaster />
       </body>
     </html>
   );
