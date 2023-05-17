@@ -15,6 +15,19 @@ import { Toaster } from "react-hot-toast";
 export const links: LinksFunction = () => [
   ...(cssBundleHref ? [{ rel: "stylesheet", href: cssBundleHref }] : []),
   { rel: "stylesheet", href: styles },
+  {
+    rel: "preconnect",
+    href: "https://fonts.gstatic.com",
+    crossOrigin: "anonymous",
+  },
+  {
+    rel: "preconnect",
+    href: "https://fonts.googleapis.com",
+  },
+  {
+    href: "https://fonts.googleapis.com/css2?family=Titillium+Web:wght@200;300;400;600;700&display=swap",
+    rel: "stylesheet",
+  },
 ];
 
 export default function App() {

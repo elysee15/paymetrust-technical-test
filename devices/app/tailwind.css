@@ -5,6 +5,7 @@
 @layer base {
   :root {
     @apply text-primary;
+    font-family: "Titillium web", sans-serif;
   }
 
   fieldset {
@@ -24,7 +25,7 @@
   }
 
   button {
-    @apply py-2 px-5 text-sm font-medium rounded-[4px] uppercase;
+    @apply py-2 px-5 text-sm font-semibold rounded-[4px] uppercase;
   }
 }
 
