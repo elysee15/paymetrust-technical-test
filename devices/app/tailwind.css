@@ -1,0 +1,42 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    @apply text-primary;
+  }
+
+  fieldset {
+    @apply my-1 relative;
+  }
+
+  fieldset:has(input[type="email"]):before {
+    @apply z-10 absolute top-1 left-0 px-2 content-[url(/assets/icons/mail.svg)] h-full flex items-center;
+  }
+
+  fieldset:has(input[type="password"]):before {
+    @apply z-10 absolute top-1 left-0 px-2 content-[url(/assets/icons/warning.svg)] h-full flex items-center;
+  }
+
+  input {
+    @apply bg-[#ECEFF1] py-3 px-4 pl-11 text-gray-700 rounded-none w-full placeholder:text-gray-500 placeholder:font-normal relative outline-[#0376bd] outline-offset-4;
+  }
+
+  button {
+    @apply py-2 px-5 text-sm font-medium rounded-[4px] uppercase;
+  }
+}
+
+@layer utilities {
+  .custom_shadow {
+    box-shadow: 8px 8px 5px #1b2327;
+  }
+
+  .square {
+    width: 50px;
+    height: 50px;
+    background-color: red;
+    position: absolute;
+  }
+}
