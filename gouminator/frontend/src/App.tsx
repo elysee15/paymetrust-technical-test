@@ -18,7 +18,7 @@ function App() {
       <h2>Generateur de Goumin @ AKIL TECHNOLOGIES</h2>
       <p>Input a number and get the value of your goumin.</p>
       <form id="form" onSubmit={handleSubmit}>
-        <label htmlFor="goumin">Goumin</label>
+        <label htmlFor="radius">Goumin</label>
         <input
           name="goumin"
           value={radius}
@@ -31,10 +31,7 @@ function App() {
           {loading ? "Submitting..." : "Submit"}
         </button>
         {error && <p className="error">{error}</p>}
-        <p>
-          Your goumin amount is{" "}
-          <span id="goumin-amount">{gouminAmount ?? "-"}</span> cm3
-        </p>
+        <p>Your goumin amount is {gouminAmount || "-"} cm3</p>
       </form>
     </main>
   );
