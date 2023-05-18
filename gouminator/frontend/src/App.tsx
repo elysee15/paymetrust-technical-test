@@ -1,6 +1,7 @@
 import { useRef, useState } from "react";
 import "./App.css";
 import axios from "axios";
+import { getBaseUrl } from "./utils/base-url";
 
 function App() {
   const {
@@ -95,7 +96,7 @@ function useGoumin() {
 
   function createVolume(radius: number) {
     return axios
-      .post("http://localhost:4001/volume", { radius })
+      .post(`${getBaseUrl()}/volume`, { radius })
       .then((response) => response.data);
   }
 
