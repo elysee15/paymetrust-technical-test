@@ -18,6 +18,8 @@ describe("App", () => {
       radius: 5,
     };
 
+    // eslint-disable-next-line @typescript-eslint/ban-ts-comment
+    // @ts-ignore
     axios.post.mockResolvedValueOnce({ data: mockResponse });
 
     render(<App />);

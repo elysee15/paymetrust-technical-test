@@ -3,7 +3,7 @@ const cors = require("cors");
 const { getVolume, getVolumes } = require("./utils");
 
 const app = express();
-const port = 4001;
+const port = process.env.PORT || 4001;
 
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
