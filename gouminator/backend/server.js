@@ -22,7 +22,6 @@ app.listen(port, () => {
 
 async function createVolume(req, res) {
   const radius = req.body?.radius;
-  console.log("radius", radius);
 
   if (!radius) {
     return res.status(400).send({
@@ -65,3 +64,5 @@ async function createVolumes(req, res) {
 
   res.send(await getVolumes(radii));
 }
+
+module.exports = app;
