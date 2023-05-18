@@ -58,8 +58,8 @@
       return (4 / 3) * Math.PI * Math.pow(goumin / 2, 3);
     }
 
+    const cache = {};
     function getGouminAmount(goumin) {
-      const cache = {};
       if (goumin in cache) {
         return cache[goumin];
       }
