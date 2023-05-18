@@ -32,7 +32,7 @@ function App() {
         </button>
         {error && <p className="error">{error}</p>}
         <p>
-          Ta quantité de goumin est de{" "}
+          Your goumin amount is{" "}
           <span id="goumin-amount">{gouminAmount ?? "-"}</span> cm3
         </p>
       </form>
