@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>The Gouminator</title>
+    <style>
+      body {
+        padding-top: 30px;
+        font-family: system-ui, sans-serif;
+      }
+
+      label {
+        display: block;
+        margin-bottom: 5px;
+      }
+
+      input {
+        display: block;
+        border: none;
+        padding: 8px;
+        border: 1px solid #ccc;
+        outline-color: #ccc;
+        outline-offset: 4px;
+        margin-bottom: 6px;
+      }
+
+      button {
+        padding: 8px;
+        border: 1px solid #ccc;
+        outline-color: #ccc;
+        outline-offset: 4px;
+        cursor: pointer;
+      }
+    </style>
+  </head>
+
+  <body>
+    <h1>The Gouminator</h1>
+    <h2>Generateur de Goumin @ AKIL TECHNOLOGIES</h2>
+    <p>Input a number and get the value of your goumin.</p>
+    <form id="form">
+      <label for="goumin">Goumin</label>
+      <input
+        type="number"
+        name="goumin"
+        id=""
+        type="number"
+        min="100"
+        required
+      />
+      <button type="submit">Submit</button>
+      <p>Ta quantité de goumin est de <span id="goumin-amount">-</span> cm3</p>
+    </form>
+  </body>
+
+  <script>
+    function computeGouminAmount(goumin = 0) {
+      return (4 / 3) * Math.PI * Math.pow(goumin / 2, 3);
+    }
+
+    function getGouminAmount(goumin) {
+      const cache = {};
+      if (goumin in cache) {
+        return cache[goumin];
+      }
+      const gouminAmount = computeGouminAmount(goumin);
+      cache[goumin] = gouminAmount;
+      return gouminAmount;
+    }
+
+    const handleSubmit = (event) => {
+      event.preventDefault();
+
+      const formData = new FormData(event.target);
+      const formValues = Object.fromEntries(formData);
+
+      const gouminAmount = getGouminAmount(formValues.goumin);
+
+      const gouminAmountElement = document.getElementById("goumin-amount");
+      gouminAmountElement.textContent = gouminAmount;
+
+      event.target.reset();
+    };
+
+    const form = document.getElementById("form");
+    form.addEventListener("submit", handleSubmit);
+  </script>
+</html>
