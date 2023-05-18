@@ -1,9 +1,9 @@
 
 # PAYMETRUST technical test
 
-This contains the differents tests that I received by emails. I've grouped them by folder
+This contains the differents tests. I've grouped them by folder
 
-- [Frontend-Developer-Test](https://github.com/paymetrust-product/frontend-developer-test) que j'ai nommé `devices`
+- [Frontend-Developer-Test](https://github.com/paymetrust-product/frontend-developer-test) I called `devices`
 
 - [Gouminator](https://github.com/paymetrust-product/gouminator)
 
