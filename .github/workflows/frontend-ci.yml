@@ -22,7 +22,7 @@ jobs:
           node-version: 16
 
       - name: Install dependencies
-        run: cd gouminator/frontend yarn install
+        run: cd gouminator/frontend && yarn install
 
       - name: Run tests
-        run: cd gouminator/frontend npm run test
+        run: cd gouminator/frontend && npm run test

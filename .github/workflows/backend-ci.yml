@@ -22,7 +22,7 @@ jobs:
           node-version: 16
 
       - name: Install dependencies
-        run: cd gouminator/backend npm run install
+        run: cd gouminator/backend && npm run install
 
       - name: Run tests
-        run: cd gouminator/backend npm run test
+        run: cd gouminator/backend && npm run test
