@@ -11,3 +11,8 @@ This contains the differents tests that I received by emails. I've grouped them 
 
 - Frontend-Developer-Test: [Remix](remix.run), Tailwindcss and Typescript
 - Gouminator: ExpressJs, HTML, CSS, ReactJs, Javascript and Typescript
+
+## Liens
+- [Gouminator UI](https://gouminator.vercel.app/)
+- [Gouminator API](https://gouminator-api.fly.dev/)
+- [Devices](https://devices-jet.vercel.app/)
